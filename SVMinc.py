@@ -771,9 +771,9 @@ def FormatingOrderInHand(File_Path):
 class NomeTest(BaseCase):
     def login_to_swag_labs(self):
         self.maximize_window()
-        self.open('https://svm.bluekaktus.com/#/login/:svm')
-        self.send_keys('#username', 'admin')
-        self.send_keys('#password', 'Secure!@345')
+        self.open('https://companyname.bluekaktus.com/#/login/:company')
+        self.send_keys('#username', username)
+        self.send_keys('#password', password)
         self.click('.submitForm')
         if self.assert_element_not_present("#company"):
             self.click_xpath("//span[text()='Confirm']")
